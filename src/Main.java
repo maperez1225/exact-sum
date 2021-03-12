@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		String jump = "";
 		while ((br.readLine()) != null) {
 			String[] split = br.readLine().split(" ");
 			int[] prices = new int[split.length];
@@ -26,7 +27,8 @@ public class Main {
 				else
 					midpoint = true;
 			}
-			System.out.println("\nPeter should buy books whose prices are "+bookPrice+" and "+(m-bookPrice)+".");
+			System.out.println(jump+"Peter should buy books whose prices are "+bookPrice+" and "+(m-bookPrice)+".");
+			jump = "\n";
 			br.readLine();
 		}
 		br.close();
